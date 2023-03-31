@@ -162,11 +162,11 @@ class NewPrescription extends Component {
         return (
           <>
             <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
-              <Navbar.Brand href="/physician">E-Rezept</Navbar.Brand>
+              <Navbar.brand style={{color:"#1eb2a6"}}href="/physician">E-Recipe</Navbar.brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
-                      <Nav.Link active>Neues Rezept</Nav.Link>
+                      <Nav.Link active>New recipe</Nav.Link>
                   </Nav>
                   <Button href="/" variant="outline-danger">Hauptmenü</Button>
               </Navbar.Collapse>

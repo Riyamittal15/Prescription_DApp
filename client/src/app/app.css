@@ -1,0 +1,11 @@
+.heading{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 20px #049b8e,
+    -2px 1px 30px #00b4a5;
+    padding-top: 10em;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin: 0 auto;
+  }

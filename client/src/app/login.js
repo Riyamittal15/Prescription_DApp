@@ -120,21 +120,21 @@ class NewLogin extends Component {
 
         // Checking if an user exists with the public key and if its verified
         if (verified === true) {
-          if (role === "Insured") {
+          if (role === "Patient") {
             this.setState({
               missingInput: false,
               unknownUser: true,
               unverifiedUser: false,
               status: "login_insured",
             });
-          } else if (role === "Physician") {
+          } else if (role === "Doctor") {
             this.setState({
               missingInput: false,
               unknownUser: true,
               unverifiedUser: false,
               status: "login_physician",
             });
-          } else if (role === "Pharmacist") {
+          } else if (role === "Chemist") {
             this.setState({
               missingInput: false,
               unknownUser: true,
@@ -157,21 +157,21 @@ class NewLogin extends Component {
           });
         }
       } else {
-        if (role === "Insured") {
+        if (role === "Patient") {
           this.setState({
             missingInput: false,
             unknownUser: true,
             unverifiedUser: false,
             status: "registration_insured",
           });
-        } else if (role === "Physician") {
+        } else if (role === "Doctor") {
           this.setState({
             missingInput: false,
             unknownUser: true,
             unverifiedUser: false,
             status: "registration_physician",
           });
-        } else if (role === "Pharmacist") {
+        } else if (role === "Chemist") {
           this.setState({
             missingInput: false,
             unknownUser: true,
@@ -250,16 +250,16 @@ class NewLogin extends Component {
     const { account, userContract } = this.state;
     var verified = undefined;
 
-    if (role === "Insured") {
+    if (role === "Patient") {
       try {
-        console.log("Insured");
+        console.log("Patient");
         verified = await userContract.methods
           .checkVerification("insured", public_key)
           .call({ from: account, gas: 1000000 });
       } catch {
         verified = false;
       }
-    } else if (role === "Physician") {
+    } else if (role === "Doctor") {
       try {
         verified = await userContract.methods
           .checkVerification("physician", public_key)
@@ -267,7 +267,7 @@ class NewLogin extends Component {
       } catch {
         verified = false;
       }
-    } else if (role === "Pharmacist") {
+    } else if (role === "Chemist") {
       try {
         verified = await userContract.methods
           .checkVerification("pharmacist", public_key)
@@ -336,10 +336,10 @@ class NewLogin extends Component {
                         onChange={this.handleChange}
                         className="login-select"
                       >
-                        <option>Login when...</option>
-                        <option>Insured</option>
-                        <option>Physician</option>
-                        <option>Pharmacist</option>
+                        <option>Login as...</option>
+                        <option>Patient</option>
+                        <option>Doctor</option>
+                        <option>Chemist</option>
                         <option>Admin</option>
                       </Form.Control>
                     </Form.Group>
@@ -356,15 +356,15 @@ class NewLogin extends Component {
                       variant="danger"
                       className="mt-3"
                     >
-                      This account has not yet been verified or she has been
-                      Try to register with a wrong role!
+                      This account has not yet been verified or you
+                      try to log in with a wrong role!
                     </Alert>
                     <Alert
                       show={this.state.missingInput}
                       variant="danger"
                       className="mt-3"
                     >
-                      Please select your role!
+                      Please select your role.
                     </Alert>
                   </Form>
                 </Col>

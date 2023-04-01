@@ -158,7 +158,7 @@ class NewPrescription extends Component {
         return (
           <>
             <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
-              <Navbar.brand style={{color:"#1eb2a6"}}href="/physician">E-Recipe</Navbar.brand>
+              <Navbar.Brand style={{color:"#1eb2a6"}} href="/physician">E-Recipe</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
@@ -194,11 +194,11 @@ class NewPrescription extends Component {
                     <Button variant="success" block onClick={this.newPrescription}>Create a new prescription</Button>
     
                     <Alert show={this.state.sendingError} variant="danger" className="mt-3">
-                        Transfer error.Please check your details!
+                    Please check your details!
                     </Alert>
 
                     <Alert show={this.state.missingInput} variant="danger" className="mt-3">
-                        Please fill in all fields!
+                    Please fill in all fields!
                     </Alert>
                   </Col>
 

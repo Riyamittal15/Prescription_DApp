@@ -209,14 +209,17 @@ class RegisterInsured extends Component {
       return (
         <>
           <Navbar sticky="top" bg="light" variant="dark" expand="lg">
-            <Navbar.Brand style={{ color: "#1eb2a6" }} >
-              TRU Pharma
-            </Navbar.Brand  >
+            <Navbar.Brand style={{ color: "#1eb2a6" }}>TRU Pharma</Navbar.Brand>
           </Navbar>
           <Container fluid className="mt-5">
+            <div
+              class="title"
+              style={{ fontSize: "30px", textAlign: "center" }}
+            >
+              REGISTER PATIENT
+            </div>
             <Row>
               <Col xs={0} sm={1} md={3} lg={4}></Col>
-
               <Col>
                 <Form>
                   <div className="pb-3 pt-4">General Information:</div>
@@ -226,7 +229,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_surname">
                         <Form.Control
                           type="text"
-                          placeholder="Vorname"
+                          placeholder="First name"
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -236,7 +239,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_name">
                         <Form.Control
                           type="text"
-                          placeholder="Name"
+                          placeholder=" Last Name"
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -259,7 +262,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_street_number">
                         <Form.Control
                           type="text"
-                          placeholder="House number"
+                          placeholder="House No."
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -282,7 +285,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_city">
                         <Form.Control
                           type="text"
-                          placeholder="Stadt"
+                          placeholder="City"
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -293,15 +296,13 @@ class RegisterInsured extends Component {
                   <Form.Group controlId="insured_birth_date">
                     <Form.Control
                       type="text"
-                      placeholder="birthday"
+                      placeholder="Birthday"
                       value={this.state.value}
                       onChange={this.handleChange}
                     ></Form.Control>
                   </Form.Group>
 
-                  <div className="pb-3 pt-4">
-                    Health insurance information:
-                  </div>
+                  <div className="pb-3 pt-4">Health insurance information:</div>
 
                   <Form.Group controlId="insurance">
                     <Form.Control
@@ -317,7 +318,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insurance_number">
                         <Form.Control
                           type="number"
-                          placeholder="Kassen-Nr."
+                          placeholder="The box no."
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -346,8 +347,8 @@ class RegisterInsured extends Component {
                   </Row>
                 </Form>
 
-                <Button variant="success" block onClick={this.addNewUser}>
-                  To register
+                <Button className="button2" block onClick={this.addNewUser}>
+                  Register
                 </Button>
 
                 <Alert

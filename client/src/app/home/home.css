@@ -1,0 +1,9 @@
+.nav-button{
+    margin-top: 0px;
+    float: right;
+
+}
+.navbar-button{
+    display: flex;
+    flex-direction: row-reverse;
+}

@@ -164,16 +164,21 @@ class RegisterPharmacist extends Component {
       return (
         <>
           <Navbar sticky="top" bg="light" variant="dark" expand="lg">
-            <Navbar.Brand style={{ color: "#1eb2a6" }} >TRU Pharma</Navbar.Brand >
+            <Navbar.Brand style={{ color: "#1eb2a6" }}>TRU Pharma</Navbar.Brand>
           </Navbar>
 
+          <div class="title" style={{ fontSize: "40px", textAlign: "center" }}>
+            REGISTER PHARMACIST
+          </div>
           <Container fluid className="mt-5">
             <Row>
               <Col xs={0} sm={1} md={3} lg={4}></Col>
 
               <Col>
                 <Form>
-                  <div className="pb-3 pt-4">Information about the pharmacy:</div>
+                  <div className="pb-3 pt-4" style={{fontWeight:"600"}}>
+                    Information about the pharmacy:
+                  </div>
 
                   <Form.Group controlId="pharmacy_name">
                     <Form.Control
@@ -187,15 +192,15 @@ class RegisterPharmacist extends Component {
                   <Form.Group controlId="pharmacy_number">
                     <Form.Control
                       type="number"
-                      placeholder="Pharmacy - Registration - Nummer"
+                      placeholder="Pharmacy Registration Number"
                       value={this.state.value}
                       onChange={this.handleChange}
                     ></Form.Control>
                   </Form.Group>
                 </Form>
 
-                <Button variant="success" block onClick={this.addNewUser}>
-                  To register
+                <Button className="button2" block onClick={this.addNewUser}>
+                  Register
                 </Button>
 
                 <Alert

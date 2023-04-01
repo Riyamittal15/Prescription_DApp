@@ -217,7 +217,9 @@ class Administration extends Component {
         return (
           <>
             <Navbar sticky="top" bg="light" variant="light" expand="lg">
-              <Navbar.Brand href="/login">Tru Pharma</Navbar.Brand>
+              <Navbar.Brand href="/login" style={{ color: "#1eb2a6" }}>
+                TRU Pharma
+              </Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto"></Nav>
@@ -226,23 +228,39 @@ class Administration extends Component {
                 </Button>
               </Navbar.Collapse>
             </Navbar>
-            <h1 className="heading" style={{display: "block",color: "white",paddingTop:"0.8em",
-    textTransform: "uppercase",
-    fontSize: "1.5em",
-    fontWeight: "900",
-    margin: "0 auto",textAlign:"center"}}>Verification by Admin</h1>
+            <h1
+              className="heading"
+              style={{
+                display: "block",
+                color: "white",
+                paddingTop: "0.8em",
+                textTransform: "uppercase",
+                fontSize: "1.5em",
+                fontWeight: "900",
+                margin: "0 auto",
+                textAlign: "center",
+              }}
+            >
+              Verification by Admin
+            </h1>
 
-            <Container fluid className="mt-5 mb-5" style={{backgroundColor:"white", borderRadius:"30px",width:"55em"}}>
+            <Container
+              fluid
+              className="mt-5 mb-5"
+              style={{
+                backgroundColor: "white",
+                borderRadius: "30px",
+                width: "55em",
+              }}
+            >
               <Row className="mb-5">
                 <Col xs={0} sm={0} md={1} lg={2}></Col>
 
                 <Col>
-                  <div className="pb-3 pt-4">
-                    Verification of the Patient:
-                  </div>
+                  <div className="pb-3 pt-4">Verification of the Patient:</div>
 
-                  <Form >
-                    <Form.Group controlId="insured_address" >
+                  <Form>
+                    <Form.Group controlId="insured_address">
                       <Form.Control
                         value={this.state.value}
                         onChange={this.handleChange}
@@ -252,8 +270,12 @@ class Administration extends Component {
                     </Form.Group>
                   </Form>
 
-                  <Button className="button2" block onClick={this.verifyInsured}>
-                    To verify
+                  <Button
+                    className="button2"
+                    block
+                    onClick={this.verifyInsured}
+                  >
+                    VERIFY
                   </Button>
                 </Col>
 
@@ -276,7 +298,7 @@ class Administration extends Component {
                     block
                     onClick={this.verifyPhysician}
                   >
-                    To verify
+                    VERIFY
                   </Button>
                 </Col>
 
@@ -299,7 +321,7 @@ class Administration extends Component {
                     block
                     onClick={this.verifyPharmacist}
                   >
-                    To verify
+                    VERIFY
                   </Button>
                 </Col>
 
@@ -310,8 +332,8 @@ class Administration extends Component {
                 <Col xs={0} sm={0} md={1} lg={2}></Col>
                 <Col>
                   <div className="pb-3 pt-4">
-                    Connection of smart contract prescription and smart
-                    Contract user:
+                    Connection of smart contract prescription and smart Contract
+                    user:
                   </div>
 
                   <Form>
@@ -328,7 +350,7 @@ class Administration extends Component {
                   <Button
                     className="button2"
                     block
-                    style={{marginBottom:"2em"}}
+                    style={{ marginBottom: "2em" }}
                     onClick={this.connectSmartContractUser}
                   >
                     Connect

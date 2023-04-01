@@ -310,7 +310,12 @@ class NewLogin extends Component {
                   {/* <h2 className="mt-5">Login</h2> */}
 
                   {/* <div class="form1"> */}
-                  <div class="title">Hey There, Welcome!</div>
+                  <div
+                    class="title"
+                    style={{ fontSize: "40px", textAlign: "center" }}
+                  >
+                    HEY THERE, WELCOME!
+                  </div>
                   <div class="input-container ic1">
                     <input
                       id="firstname"
@@ -320,7 +325,7 @@ class NewLogin extends Component {
                     />
                     <div class="cut"></div>
                     <label for="firstname" class="placeholder">
-                      Enter your good name!
+                      Enter your name!
                     </label>
                   </div>
                   {/* <button type="text" class="submit">
@@ -343,11 +348,7 @@ class NewLogin extends Component {
                         <option>Admin</option>
                       </Form.Control>
                     </Form.Group>
-                    <Button
-                      className="button1 mb-3"
-                      onClick={this.login}
-                      block
-                    >
+                    <Button className="button1 mb-3" onClick={this.login} block>
                       Proceed
                     </Button>
 
@@ -356,8 +357,8 @@ class NewLogin extends Component {
                       variant="danger"
                       className="mt-3"
                     >
-                      This account has not yet been verified or you
-                      try to log in with a wrong role!
+                      This account has not yet been verified or you are
+                      trying to log in with a wrong role!
                     </Alert>
                     <Alert
                       show={this.state.missingInput}

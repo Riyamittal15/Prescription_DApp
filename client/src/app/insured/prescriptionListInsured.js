@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import { Redirect, BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -148,7 +144,7 @@ class PrescriptionListInsured extends Component {
             // If the insured has no prescription in his list, then a message is shown. Otherwise the prescriptions are shown.
             if(this.state.prescriptions.length === 0){
                 return(
-                    <p>Aktuelle wurden Ihnen keine Rezept verordnet!</p>
+                    <p>No prescription was prescribed for you!</p>
                 )
             } else {
                 var items = []
@@ -160,15 +156,15 @@ class PrescriptionListInsured extends Component {
                     var formId = "public_key_pharmacist_" + prescription_id
                     console.log(prescription)
 
-                    if(prescription.status === 'Patient'){
+                    if(prescription.status === 'Insured'){
                         items.push(
                             <Card className="mt-5" border="danger" key={formId}>
-                                <Card.Header as="h6"><b>Status:</b> Noch nicht eingelöst</Card.Header>
+                                <Card.Header as="h6"><b>Status:</b> Not yet redeemed</Card.Header>
                                 <Card.Body>
                                     <Card.Title as="h3">{prescription.medicine_name}</Card.Title>
                                     <Card.Text className="mt-4">
-                                        <b>Dosis:</b> {prescription.medicine_amount}<br/>
-                                        <b>Ausgestellt von:</b> {prescription.physician_name}    
+                                        <b>Dose:</b> {prescription.medicine_amount}<br/>
+                                        <b>Issued by:</b> {prescription.physician_name}    
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
@@ -190,32 +186,32 @@ class PrescriptionListInsured extends Component {
                     } else if (prescription.status === 'Pharmacist') {
                         items.push(
                             <Card className="mt-5" border="warning" key={formId}>
-                                <Card.Header as="h6"><b>Status:</b> In der Apotheke</Card.Header>
+                                <Card.Header as="h6"><b>Status:</b> In the pharmacy</Card.Header>
                                 <Card.Body>
                                     <Card.Title as="h3">{prescription.medicine_name}</Card.Title>
                                     <Card.Text className="mt-4">
-                                        <b>Dosis:</b> {prescription.medicine_amount}<br/>
-                                        <b>Ausgestellt von:</b> {prescription.physician_name}    
+                                        <b>Dose:</b> {prescription.medicine_amount}<br/>
+                                        <b>Issued by:</b> {prescription.physician_name}    
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <b>Gesendet an:</b> {prescription.pharmacist_name}
+                                    <b>Sent to:</b> {prescription.pharmacist_name}
                                 </Card.Footer>
                             </Card>
                         )
                     } else if (prescription.status === 'Redeemed') {
                         items.push(
                             <Card className="mt-5" border="success" key={formId}>
-                                <Card.Header as="h6"><b>Status:</b> Eingelöst</Card.Header>
+                                <Card.Header as="h6"><b>Status:</b> Redeemed</Card.Header>
                                 <Card.Body>
                                     <Card.Title as="h3">{prescription.medicine_name}</Card.Title>
                                     <Card.Text className="mt-4">
-                                        <b>Dosis:</b> {prescription.medicine_amount}<br/>
-                                        <b>Ausgestellt von:</b> {prescription.physician_name}    
+                                        <b>Dose:</b> {prescription.medicine_amount}<br/>
+                                        <b>Issued by:</b> {prescription.physician_name}    
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <b>Gesendet an:</b> {prescription.pharmacist_name}
+                                    <b>Sent to:</b> {prescription.pharmacist_name}
                                 </Card.Footer>
                             </Card>
                         )

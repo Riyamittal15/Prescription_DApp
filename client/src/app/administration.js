@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "./getWeb3";
 import {
@@ -226,7 +222,7 @@ class Administration extends Component {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto"></Nav>
                 <Button href="/" variant="outline-danger">
-                  Hauptmenü
+                  Main Menu
                 </Button>
               </Navbar.Collapse>
             </Navbar>
@@ -234,7 +230,7 @@ class Administration extends Component {
     textTransform: "uppercase",
     fontSize: "1.5em",
     fontWeight: "900",
-    margin: "0 auto",textAlign:"center"}}>verification by admin</h1>
+    margin: "0 auto",textAlign:"center"}}>Verification by Admin</h1>
 
             <Container fluid className="mt-5 mb-5" style={{backgroundColor:"white", borderRadius:"30px",width:"55em"}}>
               <Row className="mb-5">
@@ -242,7 +238,7 @@ class Administration extends Component {
 
                 <Col>
                   <div className="pb-3 pt-4">
-                    Verifizierung des Versicherten:
+                    Verification of the Patient:
                   </div>
 
                   <Form >
@@ -251,18 +247,18 @@ class Administration extends Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                         type="text"
-                        placeholder="Public Key des Versicherten"
+                        placeholder="Public Key of the Patient"
                       ></Form.Control>
                     </Form.Group>
                   </Form>
 
                   <Button className="button2" block onClick={this.verifyInsured}>
-                    Verifizieren
+                    To verify
                   </Button>
                 </Col>
 
                 <Col>
-                  <div className="pb-3 pt-4">Verifizierung des Arztes:</div>
+                  <div className="pb-3 pt-4">Verification of the doctor:</div>
 
                   <Form>
                     <Form.Group controlId="physician_address">
@@ -270,7 +266,7 @@ class Administration extends Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                         type="text"
-                        placeholder="Public Key des Arztes"
+                        placeholder="Public Key of the doctor"
                       ></Form.Control>
                     </Form.Group>
                   </Form>
@@ -280,12 +276,12 @@ class Administration extends Component {
                     block
                     onClick={this.verifyPhysician}
                   >
-                    Verifizieren
+                    To verify
                   </Button>
                 </Col>
 
                 <Col>
-                  <div className="pb-3 pt-4">Verifizierung der Apotheke:</div>
+                  <div className="pb-3 pt-4">Verification of the pharmacy:</div>
 
                   <Form>
                     <Form.Group controlId="pharmacist_address">
@@ -293,7 +289,7 @@ class Administration extends Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                         type="text"
-                        placeholder="Public Key der Apotheke"
+                        placeholder="Public Key the pharmacy"
                       ></Form.Control>
                     </Form.Group>
                   </Form>
@@ -303,7 +299,7 @@ class Administration extends Component {
                     block
                     onClick={this.verifyPharmacist}
                   >
-                    Verifizieren
+                    To verify
                   </Button>
                 </Col>
 
@@ -314,8 +310,8 @@ class Administration extends Component {
                 <Col xs={0} sm={0} md={1} lg={2}></Col>
                 <Col>
                   <div className="pb-3 pt-4">
-                    Verbindung von Smart Contract Prescription und Smart
-                    Contract User:
+                    Connection of smart contract prescription and smart
+                    Contract user:
                   </div>
 
                   <Form>
@@ -335,7 +331,7 @@ class Administration extends Component {
                     style={{marginBottom:"2em"}}
                     onClick={this.connectSmartContractUser}
                   >
-                    Verbinden
+                    Connect
                   </Button>
                 </Col>
 

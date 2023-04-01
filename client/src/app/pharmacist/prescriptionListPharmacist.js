@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import { Redirect, BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -129,7 +125,7 @@ class PrescriptionListPharmacist extends Component {
             // If pharmacist has no prescription in his list, then a message is shown. Otherwise the prescriptions are shown.
             if(this.state.prescriptions.length === 0){
                 return(
-                    <p>Sie haben derzeit keine offenen Rezepte!</p>
+                    <p>You currently have no open prescription!</p>
                 )
             } else {
                 var items = []
@@ -146,11 +142,11 @@ class PrescriptionListPharmacist extends Component {
                                 <Card.Body>
                                     <Card.Title as="h3">{prescription.medicine_name}</Card.Title>
                                     <Card.Text className="mt-4">
-                                        <b>Dosis:</b> {prescription.medicine_amount}<br/>
+                                        <b>Dose:</b> {prescription.medicine_amount}<br/>
                                     </Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <Button block id={prescription_id} onClick={this.redeem} variant="dark">Einlösen</Button>
+                                    <Button block id={prescription_id} onClick={this.redeem} variant="dark">Redeem</Button>
                                 </Card.Footer>
                             </Card>
                         )
@@ -161,7 +157,7 @@ class PrescriptionListPharmacist extends Component {
                                 <Card.Body>
                                     <Card.Title as="h3">{prescription.medicine_name}</Card.Title>
                                     <Card.Text className="mt-4">
-                                        <b>Dosis:</b> {prescription.medicine_amount}<br/>
+                                        <b>Dose:</b> {prescription.medicine_amount}<br/>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>

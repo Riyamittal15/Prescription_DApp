@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
@@ -25,10 +21,10 @@ class App extends Component {
         if(window.ethereum === undefined){
             return(
                 <div class="m-5">
-                    <h1>MetaMask konnte nicht gefunden werden!</h1>
+                    <h1>Metamask could not be found!</h1>
                     <p>
-                        Die für die Anwendung erforderliche Browser-Erweiterung MetaMask konnte nicht gefunden werden. <br/>
-                        Bitte überprüfen Sie, ob Sie MetaMask ihrem Browser hinzugefügt haben und Sie einen mit MetaMask kompatiblen Browser verwenden!
+                        The Metamask browser extension required for the application could not be found.
+                        Please check whether you have added metamask to your browser and use a browser compatible with a metamask!
                     </p>
                 </div>
             )

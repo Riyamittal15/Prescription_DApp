@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import {
@@ -105,14 +101,14 @@ class LandingPhysician extends Component {
       return (
         <>
           <Navbar sticky="top" bg="light" variant="dark" expand="lg">
-            <Navbar.Brand style={{ color: "#1eb2a6" }} >TRU Pharmapt</Navbar.Brand >
+            <Navbar.Brand style={{ color: "#1eb2a6" }} >TRU Pharma</Navbar.Brand >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="/newPrescription">Neues Rezept</Nav.Link>
+                <Nav.Link href="/newPrescription">New Prescription</Nav.Link>
               </Nav>
               <Button href="/" variant="outline-danger">
-                Hauptmenü
+                Main Menu
               </Button>
             </Navbar.Collapse>
           </Navbar>
@@ -121,7 +117,7 @@ class LandingPhysician extends Component {
             <Row>
               <Col xs={0} sm={1} md={2} lg={3}></Col>
               <Col>
-                <h1>Rezeptübersicht</h1>
+                <h1>Prescription overview</h1>
                 <PrescriptionListPhysician />
               </Col>
               <Col xs={0} sm={1} md={2} lg={3}></Col>

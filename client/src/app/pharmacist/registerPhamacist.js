@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import {
@@ -168,7 +164,7 @@ class RegisterPharmacist extends Component {
       return (
         <>
           <Navbar sticky="top" bg="light" variant="dark" expand="lg">
-            <Navbar.Brand style={{ color: "#1eb2a6" }} >TRU Pharmapt</Navbar.Brand >
+            <Navbar.Brand style={{ color: "#1eb2a6" }} >TRU Pharma</Navbar.Brand >
           </Navbar>
 
           <Container fluid className="mt-5">
@@ -177,12 +173,12 @@ class RegisterPharmacist extends Component {
 
               <Col>
                 <Form>
-                  <div className="pb-3 pt-4">Angaben zur Apotheke:</div>
+                  <div className="pb-3 pt-4">Information about the pharmacy:</div>
 
                   <Form.Group controlId="pharmacy_name">
                     <Form.Control
                       type="text"
-                      placeholder="Name der Apotheke"
+                      placeholder="Name of the Pharmacy"
                       value={this.state.value}
                       onChange={this.handleChange}
                     ></Form.Control>
@@ -191,7 +187,7 @@ class RegisterPharmacist extends Component {
                   <Form.Group controlId="pharmacy_number">
                     <Form.Control
                       type="number"
-                      placeholder="Apotheken - Nummer"
+                      placeholder="Pharmacy - Registration - Nummer"
                       value={this.state.value}
                       onChange={this.handleChange}
                     ></Form.Control>
@@ -199,7 +195,7 @@ class RegisterPharmacist extends Component {
                 </Form>
 
                 <Button variant="success" block onClick={this.addNewUser}>
-                  Registrieren
+                  To register
                 </Button>
 
                 <Alert
@@ -207,7 +203,7 @@ class RegisterPharmacist extends Component {
                   variant="danger"
                   className="mt-3"
                 >
-                  Bitte füllen Sie alle Eingabefelder aus!
+                  Please fill out all input fields!
                 </Alert>
               </Col>
 

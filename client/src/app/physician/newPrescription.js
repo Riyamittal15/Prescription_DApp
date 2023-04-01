@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import { Redirect, BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -166,9 +162,9 @@ class NewPrescription extends Component {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="mr-auto">
-                      <Nav.Link active>New recipe</Nav.Link>
+                      <Nav.Link active>New Prescription</Nav.Link>
                   </Nav>
-                  <Button href="/" variant="outline-danger">Hauptmenü</Button>
+                  <Button href="/" variant="outline-danger">Main Menu</Button>
               </Navbar.Collapse>
             </Navbar>
     
@@ -179,30 +175,30 @@ class NewPrescription extends Component {
                   <Col>
                     <Form>
                       <Form.Group controlId="public_key_patient">
-                        <Form.Control type="text" placeholder="Public Key des Versicherten" value={this.state.value} onChange={this.handleChange}></Form.Control>
+                        <Form.Control type="text" placeholder="Public Key of the Insured" value={this.state.value} onChange={this.handleChange}></Form.Control>
                       </Form.Group>
     
                       <div className="pb-3 pt-4">
-                          Rezept:
+                          Prescription:
                       </div>
     
                       <Form.Group controlId="medicine_name">
-                        <Form.Control value={this.state.value} onChange={this.handleChange} type="text" placeholder="Name des Medikaments"></Form.Control>
+                        <Form.Control value={this.state.value} onChange={this.handleChange} type="text" placeholder="Name of the Medication"></Form.Control>
                       </Form.Group>
     
                       <Form.Group controlId="medicine_amount">
-                        <Form.Control value={this.state.value} onChange={this.handleChange} type="text" placeholder="Menge des Medikaments"></Form.Control>
+                        <Form.Control value={this.state.value} onChange={this.handleChange} type="text" placeholder="Menge of the Medication"></Form.Control>
                       </Form.Group>
                     </Form>
 
-                    <Button variant="success" block onClick={this.newPrescription}>Neues Rezept erstellen</Button>
+                    <Button variant="success" block onClick={this.newPrescription}>Create a new prescription</Button>
     
                     <Alert show={this.state.sendingError} variant="danger" className="mt-3">
-                        Fehler bei der Übertragung. Bitte überprüfen Sie Ihre Angaben!
+                        Transfer error.Please check your details!
                     </Alert>
 
                     <Alert show={this.state.missingInput} variant="danger" className="mt-3">
-                        Bitte füllen Sie alle Felder aus!
+                        Please fill in all fields!
                     </Alert>
                   </Col>
 

@@ -200,16 +200,26 @@ class RegisterPhysician extends Component {
       return (
         <>
           <Navbar sticky="top" bg="light" variant="dark" expand="lg">
-            <Navbar.Brand style={{color:"#1eb2a6"}}href="/login">E-recipe</Navbar.Brand>
+            <Navbar.Brand style={{ color: "#1eb2a6" }} href="/login">
+              Tru Pharma
+            </Navbar.Brand>
           </Navbar>
 
-          <Container fluid className="mt-5" >
-            <Row > 
+          <Container fluid className="mt-5">
+            <div
+              class="title"
+              style={{ fontSize: "40px", textAlign: "center" }}
+            >
+              REGISTER PHYSICIAN
+            </div>
+            <Row>
               <Col xs={0} sm={1} md={3} lg={4}></Col>
 
               <Col>
-                <Form >
-                  <div className="pb-3 pt-4">Information about the doctor:</div>
+                <Form>
+                  <div className="pb-3 pt-4" style={{ fontWeight: "600" }}>
+                    Information about the doctor:
+                  </div>
 
                   <Form.Group controlId="physician_job_title">
                     <Form.Control
@@ -252,7 +262,9 @@ class RegisterPhysician extends Component {
                     ></Form.Control>
                   </Form.Group>
 
-                  <div className="pb-3 pt-4">Information on the permanent establishment:</div>
+                  <div className="pb-3 pt-4" style={{ fontWeight: "600" }}>
+                    Information on the permanent establishment:
+                  </div>
 
                   <Row>
                     <Col className="pr-1" sm={9}>
@@ -269,7 +281,7 @@ class RegisterPhysician extends Component {
                       <Form.Group controlId="physician_street_number">
                         <Form.Control
                           type="text"
-                          placeholder="House number"
+                          placeholder="House No."
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -319,7 +331,7 @@ class RegisterPhysician extends Component {
                   </Form.Group>
                 </Form>
 
-                <Button className="button1" block onClick={this.addNewUser}>
+                <Button className="button2" block onClick={this.addNewUser}>
                   Register
                 </Button>
 

@@ -100,12 +100,20 @@ class LandingPhysician extends Component {
     } else {
       return (
         <>
-          <Navbar sticky="top" bg="light" variant="dark" expand="lg">
-            <Navbar.Brand style={{ color: "#1eb2a6" }} >TRU Pharma</Navbar.Brand >
+          <Navbar
+            sticky="top"
+            bg="light"
+            variant="dark"
+            expand="lg"
+            style={{ color: "#1eb2a6" }}
+          >
+            <Navbar.Brand style={{ color: "#1eb2a6" }}>TRU Pharma</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="/newPrescription">New Prescription</Nav.Link>
+                <Nav.Link href="/newPrescription" style={{ color: "#1eb2a6" }}>
+                  New prescription
+                </Nav.Link>
               </Nav>
               <Button href="/" variant="outline-danger">
                 Main Menu
@@ -114,10 +122,15 @@ class LandingPhysician extends Component {
           </Navbar>
 
           <Container fluid className="my-5">
+            <div
+              class="title"
+              style={{ fontSize: "40px", textAlign: "center" }}
+            >
+              PRESCRIPTION OVERVIEW
+            </div>
             <Row>
               <Col xs={0} sm={1} md={2} lg={3}></Col>
               <Col>
-                <h1>Prescription overview</h1>
                 <PrescriptionListPhysician />
               </Col>
               <Col xs={0} sm={1} md={2} lg={3}></Col>

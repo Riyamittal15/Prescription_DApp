@@ -101,14 +101,12 @@ class LandingInsured extends Component {
       return (
         <>
           <Navbar sticky="top" bg="light" variant="dark" expand="lg">
-            <Navbar.Brand style={{ color: "#1eb2a6" }}  >
-              TRU Pharmapt
-            </Navbar.Brand >
+            <Navbar.Brand style={{ color: "#1eb2a6" }}>TRU Pharma</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto"></Nav>
               <Button href="/" variant="outline-danger">
-                Hauptmenü
+                Main Menu
               </Button>
             </Navbar.Collapse>
           </Navbar>
@@ -117,7 +115,12 @@ class LandingInsured extends Component {
             <Row>
               <Col xs={0} sm={1} md={2} lg={3}></Col>
               <Col>
-                <h1>Prescription overview</h1>
+                <div
+                  class="title"
+                  style={{ fontSize: "40px", textAlign: "center" }}
+                >
+                  PRESCRIPTION OVERVIEW
+                </div>
                 <PrescriptionListInsured />
               </Col>
               <Col xs={0} sm={1} md={2} lg={3}></Col>

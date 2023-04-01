@@ -1,0 +1,38 @@
+.hero {
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+  ), url("https://www.psghospitals.com/wp-content/uploads/2022/08/pharmacy.jpg");
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  padding-top: 15%;
+  padding-right: 50px;
+  color: #fff;
+
+}
+.hero #heading h3 {
+  color: #fff;
+}
+.hero #heading {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: right;
+    padding-top: 50%;
+    height: 80vh;
+  }
+  .hero .row {
+    width: 100%;
+  }
+  .hero h1, .hero p, .hero #heading h3{
+    display: none;
+  }
+}

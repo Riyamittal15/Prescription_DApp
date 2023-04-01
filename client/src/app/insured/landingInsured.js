@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import {
@@ -121,7 +117,7 @@ class LandingInsured extends Component {
             <Row>
               <Col xs={0} sm={1} md={2} lg={3}></Col>
               <Col>
-                <h1>Rezeptübersicht</h1>
+                <h1>Prescription overview</h1>
                 <PrescriptionListInsured />
               </Col>
               <Col xs={0} sm={1} md={2} lg={3}></Col>

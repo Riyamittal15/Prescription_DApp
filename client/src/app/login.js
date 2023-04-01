@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "./getWeb3";
 import {
@@ -124,21 +120,21 @@ class NewLogin extends Component {
 
         // Checking if an user exists with the public key and if its verified
         if (verified === true) {
-          if (role === "Versicherte") {
+          if (role === "Insured") {
             this.setState({
               missingInput: false,
               unknownUser: true,
               unverifiedUser: false,
               status: "login_insured",
             });
-          } else if (role === "Arzt") {
+          } else if (role === "Physician") {
             this.setState({
               missingInput: false,
               unknownUser: true,
               unverifiedUser: false,
               status: "login_physician",
             });
-          } else if (role === "Apotheker") {
+          } else if (role === "Pharmacist") {
             this.setState({
               missingInput: false,
               unknownUser: true,
@@ -161,21 +157,21 @@ class NewLogin extends Component {
           });
         }
       } else {
-        if (role === "Versicherte") {
+        if (role === "Insured") {
           this.setState({
             missingInput: false,
             unknownUser: true,
             unverifiedUser: false,
             status: "registration_insured",
           });
-        } else if (role === "Arzt") {
+        } else if (role === "Physician") {
           this.setState({
             missingInput: false,
             unknownUser: true,
             unverifiedUser: false,
             status: "registration_physician",
           });
-        } else if (role === "Apotheker") {
+        } else if (role === "Pharmacist") {
           this.setState({
             missingInput: false,
             unknownUser: true,
@@ -254,16 +250,16 @@ class NewLogin extends Component {
     const { account, userContract } = this.state;
     var verified = undefined;
 
-    if (role === "Versicherte") {
+    if (role === "Insured") {
       try {
-        console.log("Versicherte");
+        console.log("Insured");
         verified = await userContract.methods
           .checkVerification("insured", public_key)
           .call({ from: account, gas: 1000000 });
       } catch {
         verified = false;
       }
-    } else if (role === "Arzt") {
+    } else if (role === "Physician") {
       try {
         verified = await userContract.methods
           .checkVerification("physician", public_key)
@@ -271,7 +267,7 @@ class NewLogin extends Component {
       } catch {
         verified = false;
       }
-    } else if (role === "Apotheker") {
+    } else if (role === "Pharmacist") {
       try {
         verified = await userContract.methods
           .checkVerification("pharmacist", public_key)
@@ -340,10 +336,10 @@ class NewLogin extends Component {
                         onChange={this.handleChange}
                         className="login-select"
                       >
-                        <option>Login als...</option>
-                        <option>Versicherte</option>
-                        <option>Arzt</option>
-                        <option>Apotheker</option>
+                        <option>Login when...</option>
+                        <option>Insured</option>
+                        <option>Physician</option>
+                        <option>Pharmacist</option>
                         <option>Admin</option>
                       </Form.Control>
                     </Form.Group>
@@ -360,15 +356,15 @@ class NewLogin extends Component {
                       variant="danger"
                       className="mt-3"
                     >
-                      Dieser Account wurde noch nicht verifiziert oder Sie
-                      versuchen sich mit einer falschen Rolle anzumelden!
+                      This account has not yet been verified or she has been
+                      Try to register with a wrong role!
                     </Alert>
                     <Alert
                       show={this.state.missingInput}
                       variant="danger"
                       className="mt-3"
                     >
-                      Bitte wählen Sie Ihre Rolle aus!
+                      Please select your role!
                     </Alert>
                   </Form>
                 </Col>

@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import { Redirect, BrowserRouter as Router, Route, Switch} from 'react-router-dom';
@@ -85,12 +81,12 @@ class LandingInsured extends Component {
             return(
                 <>
                     <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
-                        <Navbar.Brand>E-Rezept</Navbar.Brand>
+                        <Navbar.Brand>E-Prescription</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="mr-auto">
                             </Nav>
-                            <Button href="/" variant="outline-danger">Hauptmenü</Button>
+                            <Button href="/" variant="outline-danger">Main Menu</Button>
                         </Navbar.Collapse>
                     </Navbar>
 
@@ -98,7 +94,7 @@ class LandingInsured extends Component {
                         <Row> 
                             <Col xs={0} sm={1} md={2} lg={3}></Col>
                             <Col>
-                                <h1>Rezeptübersicht</h1>
+                                <h1>Prescription overview</h1>
                                 <PrescriptionListPharmacist />
                             </Col>
                             <Col xs={0} sm={1} md={2} lg={3}></Col>

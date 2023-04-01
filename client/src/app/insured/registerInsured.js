@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 import {
@@ -214,7 +210,7 @@ class RegisterInsured extends Component {
         <>
           <Navbar sticky="top" bg="light" variant="dark" expand="lg">
             <Navbar.Brand style={{ color: "#1eb2a6" }} >
-              TRU Pharmapt
+              TRU Pharma
             </Navbar.Brand  >
           </Navbar>
           <Container fluid className="mt-5">
@@ -223,7 +219,7 @@ class RegisterInsured extends Component {
 
               <Col>
                 <Form>
-                  <div className="pb-3 pt-4">Allgemeine Angaben:</div>
+                  <div className="pb-3 pt-4">General Information:</div>
 
                   <Row>
                     <Col className="pr-1">
@@ -253,7 +249,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_street">
                         <Form.Control
                           type="text"
-                          placeholder="Straße"
+                          placeholder="Street"
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -263,7 +259,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_street_number">
                         <Form.Control
                           type="text"
-                          placeholder="Hausnummer"
+                          placeholder="House number"
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -276,7 +272,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_post_code">
                         <Form.Control
                           type="number"
-                          placeholder="Postleitzahl"
+                          placeholder="Postal code"
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -297,14 +293,14 @@ class RegisterInsured extends Component {
                   <Form.Group controlId="insured_birth_date">
                     <Form.Control
                       type="text"
-                      placeholder="Geburtstag"
+                      placeholder="birthday"
                       value={this.state.value}
                       onChange={this.handleChange}
                     ></Form.Control>
                   </Form.Group>
 
                   <div className="pb-3 pt-4">
-                    Angaben zur Krankenversicherung:
+                    Health insurance information:
                   </div>
 
                   <Form.Group controlId="insurance">
@@ -312,7 +308,7 @@ class RegisterInsured extends Component {
                       value={this.state.value}
                       onChange={this.handleChange}
                       type="text"
-                      placeholder="Krankenkasse bzw. Kostenträger"
+                      placeholder="Health insurance or cost bearer"
                     ></Form.Control>
                   </Form.Group>
 
@@ -331,7 +327,7 @@ class RegisterInsured extends Component {
                       <Form.Group controlId="insured_number">
                         <Form.Control
                           type="number"
-                          placeholder="Versicherten-Nr."
+                          placeholder="Insured number."
                           value={this.state.value}
                           onChange={this.handleChange}
                         ></Form.Control>
@@ -351,7 +347,7 @@ class RegisterInsured extends Component {
                 </Form>
 
                 <Button variant="success" block onClick={this.addNewUser}>
-                  Registrieren
+                  To register
                 </Button>
 
                 <Alert
@@ -359,7 +355,7 @@ class RegisterInsured extends Component {
                   variant="danger"
                   className="mt-3"
                 >
-                  Bitte füllen Sie alle Eingabefelder aus!
+                  Please fill out all input fields!
                 </Alert>
               </Col>
 

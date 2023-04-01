@@ -1,7 +1,3 @@
-/**
- * @author Valentin Mueller <https://github.com/ValentinFFM>
- */
-
 import React, { Component } from "react";
 import getWeb3 from "../getWeb3";
 
@@ -102,7 +98,7 @@ class PrescriptionListPhysician extends Component {
         // If the physician has no prescription in his list, then a message is shown. Otherwise the prescriptions are shown.
         if(this.state.prescriptions.length === 0){
             return(
-                <p>Sie haben noch keine Rezepte ausgestellt. Klicken Sie auf "Neues Rezept", um ihr erstes Rezept zu erstellen!</p>
+                <p>You have not yet exhibited recipes.Click on "New Prescription" to create your first recipe!</p>
             )
         } else {
             var items = []
@@ -116,7 +112,7 @@ class PrescriptionListPhysician extends Component {
                         <Card.Body>
                             <Card.Title as="h3">{prescription.medicine_name}</Card.Title>
                             <Card.Text className="mt-4">
-                                <b>Dosis:</b> {prescription.medicine_amount}<br/>
+                                <b>Dose:</b> {prescription.medicine_amount}<br/>
                             </Card.Text>
                         </Card.Body>
                     </Card>
